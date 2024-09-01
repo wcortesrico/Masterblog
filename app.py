@@ -60,7 +60,6 @@ def update(post_id):
         # Post not found
         return "Post not found", 404
     if request.method == "POST":
-        print("here post")
         # Update the post in the JSON file
         # Redirect back to index
         title_from_form = request.form.get("title")
@@ -79,7 +78,6 @@ def update(post_id):
             new_file.write(blog_posts_json)
         return redirect(url_for("index"))
     else:
-        print("here get")
         redirect(url_for("update", post_id=post_id))
 
     return render_template('update.html', post=post)
