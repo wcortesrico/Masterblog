@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Post</title>
+</head>
+<body>
+    <h1>Post Title</h1>
+    <p>This is an example post. Click the button to delete it.</p>
+
+    <!-- Button to delete the post -->
+    <form action="{{ url_for('delete_post', post_id=post_id) }}" method="get">
+        <button type="submit">Delete Post</button>
+    </form>
+
+</body>
+</html>
